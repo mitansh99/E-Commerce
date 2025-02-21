@@ -1,175 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        body{
-            font-family: "Poppins", serif;
-  font-weight: 400;
-  font-style: normal;
-        }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navbar -->
     <nav class="bg-white shadow-lg">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between">
-                <div class="flex space-x-7">
-                    <div>
-                        <a href="#" class="flex items-center py-4 px-2">
-                            <span class="font-semibold text-gray-500 text-lg">E-Shop</span>
-                        </a>
-                    </div>
-                    <div class="hidden md:flex items-center space-x-1">
-                        <a href="#" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold">Home</a>
-                    </div>
-                </div>
-                <!-- Cart Icon -->
-                <div class="flex items-center space-x-3">
-                    <div class="relative">
-                        <button class="flex items-center text-gray-500 hover:text-green-500" onclick="window.location.href = './cart.html'">
-                            <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                                <path
-                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
-                                </path>
-                            </svg>
-                            <span
-                                class="absolute -top-1 -right-2 bg-green-500 text-white text-xs px-1 py-0.4 rounded-full"
-                                id="cart-count">0</span>
-                        </button>
-                    </div>
-                </div>
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex space-x-7">
+            <div>
+              <a href="#" class="flex items-center py-4 px-2">
+                <span class="font-semibold text-gray-500 text-lg">E-Shop</span>
+              </a>
             </div>
+            <div class="hidden md:flex items-center space-x-1">
+              <a
+                href="#"
+                class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold"
+                >Home</a
+              >
+            </div>
+          </div>
+          <!-- Cart Icon -->
+          <div class="flex items-center space-x-3">
+            <div class="relative">
+              <button
+                class="flex items-center text-gray-500 hover:text-green-500"
+                onclick="window.location.href = './cart.html'"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                </svg>
+                <span
+                  class="absolute -top-1 -right-2 bg-green-500 text-white text-xs px-1 py-0.4 rounded-full"
+                  id="cart-count"
+                  >0</span
+                >
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class=" w-[100%] h-[50vh] py-20 flex items-center" style="background: rgb(106,251,156);
-background: linear-gradient(17deg, rgba(106,251,156,1) 0%, rgba(220,252,231,1) 51%, rgba(246,254,248,1) 96%);">
-        <div class="container mx-auto px-6 flex flex-col items-center justify-center"">
-            <h2 class=" text-5xl font-bold mb-2 text-gray-800">
-            Welcome to Our Store
-            </h2>
-            <h3 class="text-2xl mb-8 text-gray-600">
-                Find the best products at the best prices
-            </h3>
-            <a href="#"
-                class="bg-green-500 text-white px-6 py-3 rounded-full font-medium hover:bg-green-600 transition duration-300">
-                Shop Now
-            </a>
-        </div>
+    <div
+      class="w-full h-[50vh] py-20 flex items-center"
+      style="
+        background: linear-gradient(
+          17deg,
+          rgba(106, 251, 156, 1) 0%,
+          rgba(220, 252, 231, 1) 51%,
+          rgba(246, 254, 248, 1) 96%
+        );
+      "
+    >
+      <div
+        class="container mx-auto px-6 flex flex-col items-center justify-center"
+      >
+        <h2 class="text-5xl font-bold mb-2 text-gray-800">
+          Welcome to Our Store
+        </h2>
+        <h3 class="text-2xl mb-8 text-gray-600">
+          Find the best products at the best prices
+        </h3>
+        <a
+          href="#"
+          class="bg-green-500 text-white px-6 py-3 rounded-full font-medium hover:bg-green-600 transition duration-300"
+          >Shop Now</a
+        >
+      </div>
     </div>
 
     <!-- Product Grid -->
     <div class="container mx-auto px-6 py-8">
-        <h3 class="text-gray-700 text-2xl font-medium">Featured Products</h3>
-        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-
-            <!-- Product 1 -->
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div class="h-56 w-full bg-cover"
-                    style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
-                </div>
-                <div class="px-5 py-3">
-                    <h3 class="text-gray-700 uppercase">Classic Watch</h3>
-                    <span class="text-gray-500 mt-2">$120</span>
-                    <div class="flex items-center mt-3">
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg"
-                           >-</button>
-                        <input type="number" id="watch-qty" value="1" min="1"
-                            class="w-16 text-center mx-2 border rounded" readonly>
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg" >+</button>
-                    </div>
-                    <button class="bg-green-500 text-white px-4 py-2 mt-3 rounded-lg w-full hover:bg-green-600"
-                       >
-                        Add to Cart
-                    </button>
-                </div>
+      <h3 class="text-gray-700 text-2xl font-medium">Featured Products</h3>
+      <div
+        class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6"
+      >
+        <!-- Product 1 -->
+        <div
+          class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+        >
+          <div
+            class="h-56 w-full bg-cover"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            "
+          ></div>
+          <div class="px-5 py-3">
+            <h3 class="text-gray-700 uppercase">Classic Watch</h3>
+            <span class="text-gray-500 mt-2">$120</span>
+            <div class="flex items-center mt-3">
+              <button class="bg-gray-200 px-3 py-1 rounded-lg" onclick="subQty(0)">-</button>
+              <input
+                type="number"
+                value="1"
+                min="1"
+                max="100"
+                class="qty w-16 text-center mx-2 border rounded"
+                readonly
+              />
+              <button class="bg-gray-200 px-3 py-1 rounded-lg" onclick="addQty(0)">+</button>
             </div>
-            <!-- Product 1 -->
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div class="h-56 w-full bg-cover"
-                    style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
-                </div>
-                <div class="px-5 py-3">
-                    <h3 class="text-gray-700 uppercase">Classic Watch</h3>
-                    <span class="text-gray-500 mt-2">$120</span>
-                    <div class="flex items-center mt-3">
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg"
-                           >-</button>
-                        <input type="number" id="watch-qty" value="1" min="1"
-                            class="w-16 text-center mx-2 border rounded" readonly>
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg" onclick="updateQuantity('watch', 1)">+</button>
-                    </div>
-                    <button class="bg-green-500 text-white px-4 py-2 mt-3 rounded-lg w-full hover:bg-green-600"
-                        onclick="addToCart('watch', 'Classic Watch', 120, document.getElementById('watch-qty').value)">
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-            <!-- Product 1 -->
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div class="h-56 w-full bg-cover"
-                    style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
-                </div>
-                <div class="px-5 py-3">
-                    <h3 class="text-gray-700 uppercase">Classic Watch</h3>
-                    <span class="text-gray-500 mt-2">$120</span>
-                    <div class="flex items-center mt-3">
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg"
-                           >-</button>
-                        <input type="number" id="watch-qty" value="1" min="1"
-                            class="w-16 text-center mx-2 border rounded" readonly>
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg" onclick="updateQuantity('watch', 1)">+</button>
-                    </div>
-                    <button class="bg-green-500 text-white px-4 py-2 mt-3 rounded-lg w-full hover:bg-green-600"
-                        onclick="addToCart('watch', 'Classic Watch', 120, document.getElementById('watch-qty').value)">
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                <div class="h-56 w-full bg-cover"
-                    style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
-                </div>
-                <div class="px-5 py-3">
-                    <h3 class="text-gray-700 uppercase">Headphones</h3>
-                    <span class="text-gray-500 mt-2">$250</span>
-                    <div class="flex items-center mt-3">
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg"
-                            onclick="updateQuantity('headphones', -1)">-</button>
-                        <input type="number" id="headphones-qty" value="1" min="1"
-                            class="w-16 text-center mx-2 border rounded" readonly>
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg"
-                            onclick="updateQuantity('headphones', 1)">+</button>
-                    </div>
-                    <button class="bg-green-500 text-white px-4 py-2 mt-3 rounded-lg w-full hover:bg-green-600"
-                        onclick="addToCart('headphones', 'Headphones', 250, document.getElementById('headphones-qty').value)">
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
+            <button
+              class="bg-green-500 text-white px-4 py-2 mt-3 rounded-lg w-full hover:bg-green-600"
+              onclick="addToCart(0)"
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
+        <!-- Product 2 -->
+        <div
+          class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
+        >
+          <div
+            class="h-56 w-full bg-cover"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            "
+          ></div>
+          <div class="px-5 py-3">
+            <h3 class="text-gray-700 uppercase">Headphones</h3>
+            <span class="text-gray-500 mt-2">$250</span>
+            <div class="flex items-center mt-3">
+              <button class="bg-gray-200 px-3 py-1 rounded-lg " onclick="subQty(1)">-</button>
+              <input
+                type="number"
+                value="1"
+                min="1"
+                max="100"
+                class="qty w-16 text-center mx-2 border rounded"
+                readonly
+              />
+              <button class="bg-gray-200 px-3 py-1 rounded-lg" onclick="addQty(1)">+</button>
+            </div>
+            <button
+              class="bg-green-500 text-white px-4 py-2 mt-3 rounded-lg w-full hover:bg-green-600"
+              onclick="addToCart(1)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-white shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="text-center text-gray-500">
-                © 2023 E-Shop. All rights reserved.
-            </div>
+      <div class="container mx-auto px-6 py-4">
+        <div class="text-center text-gray-500">
+          © 2023 E-Shop. All rights reserved.
         </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
+  <script src="./script.js"></script>
 </html>
