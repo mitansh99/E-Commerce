@@ -28,7 +28,7 @@
                             <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                                 <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
                             </svg>
-                            <span class="absolute -top-1 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">2</span>
+                            <span class="absolute -top-1 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full" id="cartSize">0</span>
                         </a>
                     </div>
                 </div>
@@ -41,44 +41,8 @@
         <h1 class="text-3xl font-bold text-gray-800 mb-6">Your Cart</h1>
         <div class="bg-white shadow-lg rounded-lg p-6">
             <!-- Cart Items -->
-            <div class="space-y-6">
-                <!-- Item 1 -->
-                <div class="flex items-center justify-between border-b pb-4">
-                    <div class="flex items-center">
-                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-                             alt="Classic Watch" 
-                             class="w-20 h-20 object-cover rounded-lg">
-                        <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-gray-800">Classic Watch</h3>
-                            <p class="text-gray-500">$120</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg">-</button>
-                        <input type="number" value="1" min="1" class="w-16 text-center mx-2 border rounded" readonly>
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg">+</button>
-                        <span class="text-gray-700 font-semibold ml-6">$120</span>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="flex items-center justify-between border-b pb-4">
-                    <div class="flex items-center">
-                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-                             alt="Headphones" 
-                             class="w-20 h-20 object-cover rounded-lg">
-                        <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-gray-800">Headphones</h3>
-                            <p class="text-gray-500">$250</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center">
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg">-</button>
-                        <input type="number" value="1" min="1" class="w-16 text-center mx-2 border rounded" readonly>
-                        <button class="bg-gray-200 px-3 py-1 rounded-lg">+</button>
-                        <span class="text-gray-700 font-semibold ml-6">$250</span>
-                    </div>
-                </div>
+            <div class="space-y-6" id="cartData">
+               <!-- items will add dynamicly -->
             </div>
 
             <!-- Order Summary -->
@@ -118,4 +82,5 @@
         </div>
     </footer>
 </body>
+<script src="./script.js"></script>
 </html>

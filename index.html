@@ -103,73 +103,12 @@
       <h3 class="text-gray-700 text-2xl font-medium">Featured Products</h3>
       <div
         class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6"
+        id="productDetails"
       >
         <!-- Product 1 -->
-        <div
-          class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
-        >
-          <div
-            class="h-56 w-full bg-cover"
-            style="
-              background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            "
-          ></div>
-          <div class="px-5 py-3">
-            <h3 class="text-gray-700 uppercase">Classic Watch</h3>
-            <span class="text-gray-500 mt-2">$120</span>
-            <div class="flex items-center mt-3">
-              <button class="bg-gray-200 px-3 py-1 rounded-lg" onclick="subQty(0)">-</button>
-              <input
-                type="number"
-                value="1"
-                min="1"
-                max="100"
-                class="qty w-16 text-center mx-2 border rounded"
-                readonly
-              />
-              <button class="bg-gray-200 px-3 py-1 rounded-lg" onclick="addQty(0)">+</button>
-            </div>
-            <button
-              class="bg-green-500 text-white px-4 py-2 mt-3 rounded-lg w-full hover:bg-green-600"
-              onclick="addToCart(0)"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
+      
         <!-- Product 2 -->
-        <div
-          class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden"
-        >
-          <div
-            class="h-56 w-full bg-cover"
-            style="
-              background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            "
-          ></div>
-          <div class="px-5 py-3">
-            <h3 class="text-gray-700 uppercase">Headphones</h3>
-            <span class="text-gray-500 mt-2">$250</span>
-            <div class="flex items-center mt-3">
-              <button class="bg-gray-200 px-3 py-1 rounded-lg " onclick="subQty(1)">-</button>
-              <input
-                type="number"
-                value="1"
-                min="1"
-                max="100"
-                class="qty w-16 text-center mx-2 border rounded"
-                readonly
-              />
-              <button class="bg-gray-200 px-3 py-1 rounded-lg" onclick="addQty(1)">+</button>
-            </div>
-            <button
-              class="bg-green-500 text-white px-4 py-2 mt-3 rounded-lg w-full hover:bg-green-600"
-              onclick="addToCart(1)"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
+        
       </div>
     </div>
 
