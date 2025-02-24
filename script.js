@@ -23,8 +23,24 @@ const Calculate = (id, qty, price, firstTime) => {
   timeout = setTimeout(() => {
     let updatePrice = document.getElementsByClassName("price")[id];
     updatePrice.innerHTML = `$ ${parseFloat(qty * price).toFixed(2)}`;
+    finalCalculation();
   }, 500);
 };
+
+const finalCalculation = () =>{
+  let itemsQty = document.getElementsByClassName("price");
+  
+  let sum = 0;
+  for(let i=0; i< itemsQty.length; i++){
+    let arr = document.getElementsByClassName("price")[i].innerHTML.split('').splice(2);
+    let a= '';
+    arr.forEach((item)=>  {a += item;})
+    sum += parseFloat(a);
+  }
+  document.getElementById('Subtotal').innerHTML = `$ ${sum}`;
+
+  document.getElementById('finalPrice').innerHTML = `$ ${(sum+ 10)+20}`;
+}
 
 //!------ Cart Functionality
 
@@ -188,7 +204,6 @@ const addToCart = (itemId) => {
       };
       prvData.push(product);
     }
-    console.log(prvData);
     document.getElementById("cart-count").innerHTML= prvData.length;
     localStorage.setItem("items", JSON.stringify(prvData));
   }
@@ -197,7 +212,6 @@ const addToCart = (itemId) => {
 const removeTocart = (id) => {
   const prvData = JSON.parse(localStorage.getItem("items"));
   prvData.splice(id, 1);
-  console.log(prvData);
 
   localStorage.setItem("items", JSON.stringify(prvData));
 
